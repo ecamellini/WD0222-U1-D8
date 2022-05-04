@@ -51,3 +51,65 @@ if ( student1.hasWebcam === true ) {
   console.log("Make sure to have a working webcam!")
   console.log("You can still join class :)")
 }
+
+console.log("\n----------------MODIFYING OBJECT PROPERTIES-------------------\n")
+// Suppose that the webcam of studen 1 broke...
+// Now they don't have a webcam.
+
+student1.hasWebcam = false
+console.log("Student 1 has no more webcam :(")
+console.log(student1)
+
+console.log("\n----------------ADDING OBJECT PROPERTIES-------------------\n")
+// Our User Interface now needs to show also the city of the student
+// But we don't have it...
+
+console.log("We are adding the student city:")
+student1.city = "Paris"
+student2.city = "Berlin"
+console.log(student1)
+console.log(student2)
+
+console.log("\n----------------REMOVE OBJECT PROPERTIES-------------------\n")
+// Let's say we do not need information about the webcam anymore
+
+console.log("Removing hasWebcam from both students:")
+delete student1.hasWebcam
+delete student2.hasWebcam
+console.log(student1)
+console.log(student2)
+
+// Suppose now we also want to add to the students
+// some details about their hardware, their computer.
+// For each student, we want to track:
+// -- Operating system of their computer (string)
+// -- Processor (string)
+// -- Memory (number, in GB)
+
+console.log("\n----------------NESTING OBJECTS-------------------\n")
+
+console.log("We add info about the students' computers:")
+// Properties can contain any type of data. Numbers, strings...also objects
+student1.computer = {
+  os: "Windows",
+  processor: "Intel i7",
+  memory: 16
+}
+student2.computer = {
+  os: "Mac OS",
+  processor: "M1 Pro",
+  memory: 32
+}
+
+console.log(student1)
+console.log(student2)
+
+let student3 = {
+  name: 'Rick',
+  surname: "Flair",
+  age: 50,
+  city: "London",
+  country: "UK",
+  computer: { os: "Linux", processor: "AMD Ryzen 6", memory: 16 }
+}
+console.log(student3)
