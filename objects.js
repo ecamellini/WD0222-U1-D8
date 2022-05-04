@@ -120,3 +120,14 @@ console.log( student3.computer.processor )
 console.log("\nThe memory of the computer of student 1 (John):")
 let student1Computer = student1.computer
 console.log( student1Computer.memory)
+
+// Copying OBJECTS
+// If we do as we would do with normal primitive values, we do not actually copy...
+let newStudent = student3
+console.log(newStudent)
+newStudent.surname = "Helo"
+// We edited the new object, the copy, but also the original changed
+console.log(newStudent)
+console.log(student3)
+// To actually duplicate an object, use Object.assign, follow this:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
