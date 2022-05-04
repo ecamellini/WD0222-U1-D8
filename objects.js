@@ -31,6 +31,23 @@ let student2 = {
 console.log(student1)
 console.log(student2)
 
+console.log("\n----------------ACCESSING OBJECT PROPERTIES-------------------\n")
+
 console.log("Here's the names of the students:")
 console.log( student1.name )
 console.log( student2.name )
+
+// We want to print a message based on the fact that the student 1 has a webcam or not.
+// If they have it: "Ready to join class!"
+// Otherwise: "Make sure to have a working webcam!"
+if ( student1.hasWebcam === true ) {
+  // This is a code block -- a sequence of JS instructions, delimited by curly braces
+  // Executed only if the condition is true
+  console.log("Ready to join class!")
+  console.log("Welcome!")
+} else {
+  // This is another code block
+  // Executed only if the condition is false
+  console.log("Make sure to have a working webcam!")
+  console.log("You can still join class :)")
+}
