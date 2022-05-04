@@ -113,3 +113,10 @@ let student3 = {
   computer: { os: "Linux", processor: "AMD Ryzen 6", memory: 16 }
 }
 console.log(student3)
+
+console.log("\nThe processor of the computer of student 3 (Rick):")
+console.log( student3.computer.processor )
+
+console.log("\nThe memory of the computer of student 1 (John):")
+let student1Computer = student1.computer
+console.log( student1Computer.memory)
